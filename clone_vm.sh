@@ -2,11 +2,10 @@ snippet_storage="dir01"
 snippet_storage_path="/mnt/pve/$snippet_storage/snippets"
 srcvmid="1001"
 dstvmid="100"
-vmname="seed2"
+vmname="seed"
 vmip="192.168.2.145/24"
 vmgw="192.168.2.1"
-snippet_storage="dir01"
-cloudinit_template="100.yaml"
+cloudinit_template="ci_temp.yaml"
 
 # Copy and modify cloud-init template for this VM
 echo "Modifying and copying cloud-init template for VM $vmname..."

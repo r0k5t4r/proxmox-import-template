@@ -1,0 +1,22 @@
+#cloud-config
+hostname: "seed"
+#fqdn: "seed.fritz.box"
+prefer_fqdn_over_hostname: false
+users:
+  - name: rocky
+    shell: /bin/bash
+    #sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups:
+      - wheel
+ssh_pwauth: True ## This line enables ssh password authentication
+chpasswd:
+  #list: |
+    #rocky:rocky ## Overriding default username, password
+  users:
+   - name: rocky
+     password: rocky
+     type: text
+  expire: False ## Forcing user to change the default password at first login
+ssh_pwauth: True ## This line enables ssh password authentication
+runcmd:
+  - [ systemctl, enable, --now, cockpit.socket ]

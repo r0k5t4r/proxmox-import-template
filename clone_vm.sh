@@ -5,7 +5,7 @@ dstvmid="100"
 vmname="seed"
 vmip="192.168.2.145/24"
 vmgw="192.168.2.1"
-cloudinit_template="ci_temp.yaml"
+cloudinit_template="ci-temp.yaml"
 
 # Copy and modify cloud-init template for this VM
 echo "Modifying and copying cloud-init template for VM $vmname..."

@@ -49,7 +49,7 @@ fi
 echo "Creating VM $name with ID $vmid..."
 qm create $vmid --name $name --cores 2 --memory 4096 --net0 virtio,bridge=vmbr0 --scsihw virtio-scsi-pci --cpu cputype=host &&
 echo "Importing the downloaded qcow2 disk to VM $vmid..."
-qm importdisk $vmid Rocky-9-GenericCloud-Base.latest.x86_64.qcow2 $storage &&
+qm importdisk $vmid $templatefile $storage &&
 
 # Configure the VM
 echo "Configuring VM $vmid with necessary settings..."

@@ -4,7 +4,7 @@
 snippet_storage="dir01"
 snippet_storage_path="/mnt/pve/$snippet_storage/snippets"
 csv_file="vmlist.csv"
-cloudinit_template="ci_temp.yaml"
+cloudinit_template="ci-temp.yaml"
 
 # Read the CSV file and skip the header
 tail -n +2 "$csv_file" | while IFS=',' read -r vmname dstvmid srcvmid disksize memsize cpus vmip vmgw vmip1 netvlan1 vmip2 netvlan2 vmip3 netvlan3 vmip4 netvlan4; do
